@@ -1,6 +1,6 @@
 :root {
-    --candidate-name-color: #303030;
-    --candidate-description-color: #242424;
+    --candidate-name-color: #242424;
+    --candidate-description-color: #303030;
     --candidate-background-color: #bcd7e4;
 }
 
@@ -34,10 +34,13 @@
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-    font-weight: 600;
-    color: var(--candidate-text-color);
+    font-weight: 600;    
     width: 100%;
     height: 4rem;
+}
+
+.candidate__name > h2{
+    color: var(--candidate-name-color);
 }
 
 .candidate__skills{
@@ -58,3 +61,34 @@
     margin: 0;
     padding-left: 20px;
 }
+
+.candidate__actions{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.candidate__action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2.5rem;
+    border: 1px solid #1717178b;
+    border-radius: 8px;
+    background-color: var(--candidate-name-color);
+    color: rgb(209, 209, 209);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.candidate__action:hover{
+    background-color: #676767;
+}
+

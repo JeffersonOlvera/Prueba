@@ -19,15 +19,30 @@ const Candidate = (props: CandidateType) => {
             <ul>
             {skills.map((skill, index) => (
                 <li key={index}>{skill}</li>
-            ))}
+            ))} 
             </ul>
         </div>
+        <div className="candidate__actions">
+            <button className="candidate__action" onClick={copyToClipboard}>Copiar datos 📋</button>
 
+        </div>
     </div>
     );
 
     function randomNumber() {
         return Math.floor(Math.random()*100);
+    }
+
+    function copyToClipboard() {
+        const textToCopy = `Name: ${name}, Age: ${age}, Experience: ${experience}, Status: ${status}, Skills: ${skills.join(', ')}`;
+
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                alert('Los datos han sido copiados exitosamente ✅');
+            })
+            .catch(err => {
+                console.error('Error al copiar los datos: ', err);
+            });
     }
 };
 
