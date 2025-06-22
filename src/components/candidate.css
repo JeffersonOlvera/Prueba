@@ -1,0 +1,60 @@
+:root {
+    --candidate-name-color: #303030;
+    --candidate-description-color: #242424;
+    --candidate-background-color: #bcd7e4;
+}
+
+
+.candidate__container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px 40px 18px;
+    border-radius: 8px;
+    width: 100%;
+    min-width: 250px;
+    max-width: 360px;
+    border: 1px solid #1717178b;
+    box-sizing: border-box;
+    background-color: var(--candidate-background-color);
+}
+
+
+.candidate__container > p, .candidate__skills > p, .candidate__skills > ul{
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--candidate-description-color);
+    margin: 0;
+    padding: 0;
+}
+
+.candidate__name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--candidate-text-color);
+    width: 100%;
+    height: 4rem;
+}
+
+.candidate__skills{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    
+}
+
+.candidate__skills > ul{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+}
